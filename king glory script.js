@@ -430,7 +430,7 @@ function 无界面UI(name, url) {
                 exit();
             }
         }else if (i == 3) {
-            app.openUrl("https://docs.qq.com/doc/DSU9DeXNOaXdOb1Rv");
+            app.openUrl("https://github.com/m986883511/KingGloryBrushCoins/blob/master/README.md");
             exit();
         } else if (i == 0) exit();  
     }
