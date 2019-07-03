@@ -54,7 +54,7 @@ a easy scipt that can brush gold coins in king glory
     在sd卡根目录里有 007小强脚本
     找到王者荣耀刷金币手机分辨率.txt
     把分辨率改成自己手机的分辨率
-![](/img/FBL1.PNG)
+![](/img/FBL1.png)
 
 ### 微信打赏
-![](/img/money.PNG)
+![](/img/money.png)
