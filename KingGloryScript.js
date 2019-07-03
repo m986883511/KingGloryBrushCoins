@@ -3,7 +3,7 @@ var 当前版本 = 15;
 var 云端版本;
 var 脚本名称="手机刷金币";
 var storage = storages.create(脚本名称);
-var 使用说明 = "t.cn/EvkWM4n";
+var 使用说明 = "https://github.com/m986883511/KingGloryBrushCoins/blob/master/README.md";
 var 下载链接 = "https://www.lanzous.com/b381453/";
 var 检测更新链接="https://sharechain.qq.com/38ac4fe308ce9de2ed3f402047d0599d";
 var PHONE=手机信息();
@@ -412,16 +412,11 @@ function 无界面UI(name, url) {
     if (sdk < 24) str = "无法启动脚本\n安卓版本低于7.0\n具体情况请查看说明书";
     else str = "直接启动脚本";
     while (true) {
-        var i = dialogs.select(name, "退出脚本", "查看说明书", str,"脚本无毒->附送源码");
+        var i = dialogs.select(name, "退出脚本", str,"说明书+源码+赞赏");
         if (i == -1) {
             toast("不想用就选择退出脚本");
             continue;
-        } else if (i == 1) {
-            toast("说明说网页地址已复制到剪贴板");
-            setClip(url);
-            app.openUrl(url);
-            exit();
-        } else if (i == 2) {
+        }  else if (i == 1) {
             if (sdk >= 24) break;
             else {
                 toast("说明说网页地址已复制到剪贴板");
@@ -429,10 +424,12 @@ function 无界面UI(name, url) {
                 app.openUrl(url);
                 exit();
             }
-        }else if (i == 3) {
-            app.openUrl("https://github.com/m986883511/KingGloryBrushCoins/blob/master/README.md");
+        }else if (i == 2) {
+            toast("说明说网页地址已复制到剪贴板");
+            setClip(url);
+            app.openUrl(url);
             exit();
-        } else if (i == 0) exit();  
+        }else if (i == 0) exit();  
     }
 }
 
