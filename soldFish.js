@@ -3,7 +3,7 @@ var 当前版本 = 15;
 var 云端版本;
 var 脚本名称="手机刷金币";
 var storage = storages.create(脚本名称);
-var 使用说明 = "https://github.com/m986883511/KingGloryBrushCoins/blob/master/README.md";
+var 使用说明 = "https://app.yinxiang.com/fx/79efbfde-5a14-4af9-8701-eec69092399c";
 var 下载链接 = "https://www.lanzous.com/b381453/";
 var 检测更新链接="https://sharechain.qq.com/38ac4fe308ce9de2ed3f402047d0599d";
 var PHONE=手机信息();
@@ -46,11 +46,10 @@ if(readStr==false){
     分辨率="FBL:"+Save分辨率[0]+"*"+Save分辨率[1];
     log("读TxT手机分辨率为"+Save分辨率[0]+"*"+Save分辨率[1]);
 }
-alert("脚本申明","1.脚本完全免费无任何广告\n"
-        +"2.脚本可能会报毒且有封号风险\n"
-        +"3.源码以开源,可以自行修改\n"
-        +"4.如需联系,酷安私信歌者98k或邮件\n"
-        +"\n--triplewang");
+alert("脚本申明","1.脚本无任何广告\n"
+        +"2.脚本可能会误报毒\n"
+        +"3.过量使用有封号风险\n"
+        +"\n--汪小强");
         
 检测更新(当前版本,检测更新链接);
 无界面UI("王者荣耀-手机刷金币", 使用说明);
@@ -122,9 +121,10 @@ setInterval(() => {
     }
 }, 1000);
 
-
 logFlag=0;
-//console.show();
+
+// logFlag=1;
+// console.show();
 
 window.action.setOnTouchListener(function(view, event){
     switch(event.getAction()){
@@ -316,11 +316,7 @@ function 启动循环点击线程() {
     });
 }
 function 点击屏幕(x,y) {
-    // x=x+random(-3,3);
-    // y=y+random(-3,3);
-    //log("x: "+x+"  y:"+y);
     sleep(点击间隔时间*0.2);
-    //移动绿色‘点’的位置
     pointWindow.setPosition(x-10,y-10);
     sleep(10);
     click(x,y);
@@ -384,11 +380,6 @@ function 检测更新(num,url){
  * 
  * 
  * 
- * 
- * 
- * 
- * 
- * 
  */
 function 手机信息() {
     return {
@@ -408,7 +399,7 @@ function 无界面UI(name, url) {
     if (sdk < 24) str = "无法启动脚本\n安卓版本低于7.0\n具体情况请查看说明书";
     else str = "直接启动脚本";
     while (true) {
-        var i = dialogs.select(name, "退出脚本", str,"说明书+源码+赞赏");
+        var i = dialogs.select(name, "退出脚本", str,"使用前先看说明书");
         if (i == -1) {
             toast("不想用就选择退出脚本");
             continue;
